@@ -6,6 +6,8 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 import com.gearborn.motors.api.ui.FxController;
 
+import java.io.IOException;
+
 /*Esta clase lanza JavaFX y también inicia el contexto de Spring.
  * Es el punto de entrada de la aplicación.*/
 
@@ -19,7 +21,7 @@ public class JavaFxSpringApp extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage) throws IOException {
         FxController controller = springContext.getBean(FxController.class);
         controller.start(primaryStage);
     }

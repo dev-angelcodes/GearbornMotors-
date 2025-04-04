@@ -1,20 +1,44 @@
 package com.gearborn.motors.api.ui;
 
+import com.gearborn.motors.api.JavaFxSpringApp;
+import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
+import javafx.scene.image.Image;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import org.springframework.stereotype.Component;
+
+import java.io.IOException;
+import java.util.Objects;
 
 @Component
 public class FxController {
 
-    public void start(Stage stage) {
-        Label label = new Label("Bienvenido a GearBorn Motors");
-        StackPane root = new StackPane(label);
-        Scene scene = new Scene(root, 400, 200);
+    public void start(Stage stage) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(JavaFxSpringApp.class.getResource("/com/gearborn/motors/api/fxml/menu.fxml"));
+
+        // Obtener tamaño de pantalla
+        Rectangle2D limitePantalla = Screen.getPrimary().getVisualBounds();
+        double ancho = limitePantalla.getWidth() * 0.8;
+        double alto = limitePantalla.getHeight() * 0.8;
+
+        // Configurar la escena dinamica
+        Scene scene = new Scene(fxmlLoader.load(), ancho, alto);
+        stage.setTitle("GearBorn Motors");
+
+        try {
+            Image icon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/gearborn/motors/api/imgs/logoAPP.jpg")));
+            stage.getIcons().add(icon);
+        } catch (NullPointerException e) {
+            System.err.println("Error al cargar el icono.");
+        }
+
+        // Centrar la ventana
+        stage.setX(limitePantalla.getMinX() + (limitePantalla.getWidth() - ancho) / 2);
+        stage.setY(limitePantalla.getMinY() + (limitePantalla.getHeight() - alto) / 2);
+
         stage.setScene(scene);
-        stage.setTitle("App JavaFX + Spring Boot");
         stage.show();
     }
 }
