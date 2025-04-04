@@ -8,7 +8,7 @@
 
 <?import javafx.geometry.Insets?>
 <VBox fx:id="VBoxMenu" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.gearborn.motors.api.ui.MenuController">
+      fx:controller="com.gearborn.motors.api.controllersFx.MenuController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="60.0"/>
     </padding>

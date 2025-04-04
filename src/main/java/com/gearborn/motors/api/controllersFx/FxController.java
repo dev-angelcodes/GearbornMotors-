@@ -1,4 +1,4 @@
-package com.gearborn.motors.api.ui;
+package com.gearborn.motors.api.controllersFx;
 
 import com.gearborn.motors.api.JavaFxSpringApp;
 import javafx.fxml.FXMLLoader;

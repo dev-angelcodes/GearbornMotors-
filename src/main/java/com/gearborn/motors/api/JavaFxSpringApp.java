@@ -4,7 +4,7 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
-import com.gearborn.motors.api.ui.FxController;
+import com.gearborn.motors.api.controllersFx.FxController;
 
 import java.io.IOException;
 
