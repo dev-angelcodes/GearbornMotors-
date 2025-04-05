@@ -1,20 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.shape.Rectangle?>
 <VBox fx:id="VBoxMenu" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      stylesheets="/com/gearborn/motors/api/css/Menu.css"
+      styleClass="background"
       fx:controller="com.gearborn.motors.api.controllersFx.MenuController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="60.0"/>
+        <Insets bottom="20.0" left="30.0" right="30.0" top="30"/>
     </padding>
 
-    <VBox alignment="CENTER" spacing="15">
-        <Label text="¡Bienvenido a MOTORDREAMS!" style="-fx-font-weight: bold;"/>
-        <Button text="Entrar al catálogo" />
-    </VBox>
+
+    <Label text="¡Bienvenido a GearBorn!" alignment="TOP_CENTER" styleClass="label0"/>
+
+    <HBox alignment="TOP_RIGHT">
+        <StackPane alignment="CENTER_LEFT" maxWidth="600" maxHeight="250">
+            <!-- Rectangle de fondo -->
+            <Rectangle width="600" height="250" arcWidth="20" arcHeight="20" styleClass="fondoPresentacion"/>
+
+            <!-- Contenido dentro -->
+            <VBox alignment="CENTER" spacing="15" maxWidth="580">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </padding>
+                <Label text="Hijo de los engranajes, nacido para el control!" styleClass="label1" wrapText="true"/>
+                <Label fx:id="presentation" styleClass="label2" wrapText="true"/>
+                <Label text="Porque sabemos que cada motor tiene un propósito, y el tuyo está por arrancar."
+                       styleClass="label2" wrapText="true"/>
+                <Button text="Entrar al catálogo"/>
+            </VBox>
+        </StackPane>
+    </HBox>
 </VBox>

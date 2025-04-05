@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');/*Importo tipo letra*/
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap'); /*Importo la letra*/
+
+.background{
+    -fx-background-image: url("/com/gearborn/motors/api/imgs/fondoMenu.png"); /*Ruta de la imagen*/
+    -fx-background-size: cover;   /*Hace que la imagen cubra el 100% del componente*/
+    -fx-background-repeat: no-repeat;  /* Evita que la imagen se repita */
+}
+
+.label0{
+    -fx-font-family: 'Rajdhani';
+    -fx-font-size: 50px;
+    -fx-text-fill: #2A2D34;
+}
+
+.fondoPresentacion{
+    -fx-arc-width: 20;
+    -fx-arc-height: 20;
+    -fx-fill: rgba(30, 30, 30, 0.5);
+}
+
+.label1{
+    -fx-font-family: 'VT323';
+    -fx-font-size: 20px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold; /*texto en negrita*/
+}
+
+.label2{
+    -fx-text-fill: #FFFFFF;
+}
