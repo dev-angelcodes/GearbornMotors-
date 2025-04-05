@@ -5,12 +5,15 @@ import javafx.stage.Stage;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 import com.gearborn.motors.api.controllersFx.FxController;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import java.io.IOException;
 
 /*Esta clase lanza JavaFX y también inicia el contexto de Spring.
  * Es el punto de entrada de la aplicación.*/
 
+@EnableJpaRepositories
+//Habilita el uso de repositorios JPA en la app(para realizar QueryMethods a la base de datos)
 public class JavaFxSpringApp extends Application {
 
     private ConfigurableApplicationContext springContext;
