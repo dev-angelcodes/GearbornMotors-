@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="/com/gearborn/motors/api/css/registro.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gearborn.motors.api.controllersFx.RegistroController">
+
+    <HBox alignment="CENTER" layoutX="25" layoutY="50" spacing="5">
+        <Label text="🔸Nombre ►" />
+        <TextField fx:id="nombre" promptText="ej: Pepito" />
+    </HBox>
+    <HBox alignment="CENTER" layoutX="375.0" layoutY="50.0" spacing="5">
+        <Label text="🔸Email ►" />
+        <TextField fx:id="email" promptText="ej: Pepito@gmail.com" />
+    </HBox>
+
+    <HBox alignment="CENTER" layoutX="25" layoutY="100" spacing="5">
+        <Label text="🔸DNI ►" />
+        <TextField fx:id="dni" promptText="ej: 12345678A" />
+    </HBox>
+    <HBox alignment="CENTER" layoutX="375.0" layoutY="100.0" spacing="5">
+        <Label text="Direccion ►" />
+        <TextField fx:id="direccion" promptText="ej: calleEjemplo" />
+    </HBox>
+
+    <HBox alignment="CENTER" layoutX="25" layoutY="150" spacing="5">
+        <Label text="telefono ►" />
+        <TextField fx:id="telefono" promptText="ej: 123456789" />
+    </HBox>
+    <HBox alignment="CENTER" layoutX="375.0" layoutY="150.0" spacing="5">
+        <Label text="observaciones ►" />
+        <TextField fx:id="observaciones" promptText="ej: Interesado en gasolina. " />
+    </HBox>
+
+    <HBox alignment="CENTER" layoutX="191.0" layoutY="218.0" spacing="5">
+        <Label text="🔸contraseña ►" />
+        <PasswordField fx:id="contrasena" promptText="ej: Abc12%R" />
+    </HBox>
+
+    <Button layoutX="338.0" layoutY="301.0" onAction="#registro" text="Registrarse" />
+    <Button layoutX="247.0" layoutY="301.0" onAction="#irLogin" text="⮜" />
+</AnchorPane>

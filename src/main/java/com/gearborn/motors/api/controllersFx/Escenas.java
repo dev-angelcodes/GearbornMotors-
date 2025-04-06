@@ -69,4 +69,30 @@ public class Escenas {
             e.printStackTrace();
         }
     }
+
+    public void cargarRegistro(ActionEvent event){
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(JavaFxSpringApp.class.getResource("/com/gearborn/motors/api/fxml/registro.fxml"));
+            root = fxmlLoader.load();
+
+            // Obtener tamaño de pantalla
+            Rectangle2D limitePantalla = Screen.getPrimary().getVisualBounds();
+            double ancho = 675;
+            double alto = 700;
+
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            scene = new Scene(root, ancho, alto);
+            stage.setScene(scene);
+
+            stage.setX(limitePantalla.getMinX() + (limitePantalla.getWidth() - ancho) / 2);
+            stage.setY(limitePantalla.getMinY() + (limitePantalla.getHeight() - alto) / 2);
+
+            stage.show();
+
+        } catch (IOException e) {
+            System.err.println("Error al cambiar de escena:\n " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
 }

@@ -1,4 +1,7 @@
 package com.gearborn.motors.api.persistence.repository;
 
-public interface ClienteRepository {
+import com.gearborn.motors.api.persistence.entity.ClienteEntity;
+import org.springframework.data.repository.ListCrudRepository;
+
+public interface ClienteRepository extends ListCrudRepository<ClienteEntity, Integer>{
 }

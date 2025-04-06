@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+
 public class LogController {
 
     @FXML public ImageView logo;
@@ -20,5 +21,10 @@ public class LogController {
     public void irMenu(ActionEvent event) {
         Escenas escena = new Escenas();
         escena.cargarMenu(event);
+    }
+
+    public void irRegistro(ActionEvent event) {
+        Escenas escenas = new Escenas();
+        escenas.cargarRegistro(event);
     }
 }

@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.ColumnTransformer;
 
 import java.util.List;
 
@@ -21,6 +22,10 @@ public class ClienteEntity {
     @Column(nullable = false, length = 100)
     private String nombre;
 
+    @Column(nullable = false)
+    @ColumnTransformer(write = "MD5(?)")// Aplicar MD5 para encriptar la contraseña
+    private String contrasena;
+
     @Column(nullable = false, length = 20, unique = true)
     private String dni;
 
@@ -32,7 +37,8 @@ public class ClienteEntity {
     @Column(nullable = false, length = 100, unique = true)
     private String email;
 
-    @Column(nullable = false, columnDefinition = "ENUM('cliente','proveedor', 'ambos')")
+    //Al principio el cliente puede no poner si va a ser cliente o proveedor
+    @Column(nullable = true, columnDefinition = "ENUM('cliente','proveedor', 'ambos')")
     private String tipo;
 
     private String observaciones;
