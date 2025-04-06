@@ -19,4 +19,12 @@ public class Alertas {
         a.showAndWait();
     }
 
+    public static void warning(String titulo, String cabercero, String contenido){
+        Alert a = new Alert(Alert.AlertType.WARNING);
+        a.setTitle(titulo);
+        a.setHeaderText(cabercero);
+        a.setContentText(contenido);
+        a.showAndWait();
+    }
+
 }

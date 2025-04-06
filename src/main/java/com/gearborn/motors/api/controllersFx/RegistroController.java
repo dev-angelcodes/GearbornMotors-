@@ -28,13 +28,18 @@ public class RegistroController {
         if (nombre.isEmpty() || contrasena.isEmpty() || email.isEmpty() || dni.isEmpty() || telefonoString.isEmpty()) {
             Alertas.error("Error", "Campos vacíos", "Por favor, completa todos los campos que tienen 🔸.");
         } else {
-            try {
-                Integer telefono = Integer.parseInt(telefonoString);
-                ClienteEntity cliente = new ClienteEntity(nombre, contrasena, dni, direccion.getText().trim(), telefono, email, observaciones.getText().trim());
-                loginService.save(cliente);
-                Alertas.info("Éxito", "Registro completado", "¡Bienvenido!");
-            } catch (NumberFormatException e) {
-                Alertas.error("Error", "Teléfono inválido", "Debe contener solo números.");
+            if(!email.endsWith("@gmail.com") && !email.endsWith("@hotmail.com")) {
+                Alertas.warning("Warning", "Email inválido", "El email solo soporta @gmail.com o @hotmail.com");
+                return;
+            }else{
+                try {
+                    Integer telefono = Integer.parseInt(telefonoString);
+                    ClienteEntity cliente = new ClienteEntity(nombre, contrasena, dni, direccion.getText().trim(), telefono, email, observaciones.getText().trim());
+                    loginService.save(cliente);
+                    Alertas.info("Éxito", "Registro completado", "¡Bienvenido!");
+                } catch (NumberFormatException e) {
+                    Alertas.error("Error", "Teléfono inválido", "Debe contener solo números.");
+                }
             }
         }
     }
