@@ -1,11 +1,12 @@
 package com.gearborn.motors.api.controllersFx;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
 public class MenuController {
 
-    public Label presentation;
+    @FXML public Label presentation;
 
     public void initialize() {
         presentation.setText("En GearBorn Motors no solo vendemos vehículos, conectamos personas con su próximo destino." +
@@ -14,7 +15,8 @@ public class MenuController {
     }
 
 
-    public void login(ActionEvent event) {
-
+    public void irLogin(ActionEvent event) {
+        Escenas escena = new Escenas();
+        escena.cargarLogin(event);
     }
 }

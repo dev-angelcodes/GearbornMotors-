@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.control.PasswordField?>
+<VBox alignment="TOP_CENTER" spacing="50.0" xmlns:fx="http://javafx.com/fxml"
+      stylesheets="/com/gearborn/motors/api/css/log.css"
+      styleClass="background"
+      fx:controller="com.gearborn.motors.api.controllersFx.LogController">
+
+    <padding>
+        <Insets bottom="20.0" left="30.0" right="30.0" top="20"/>
+    </padding>
+
+    <ImageView fx:id="logo"/>
+
+    <StackPane maxWidth="400" maxHeight="300"
+               AnchorPane.leftAnchor="200" AnchorPane.topAnchor="100">
+
+        <Rectangle width="400" height="275" styleClass="fondoLogeo"/>
+
+        <VBox alignment="CENTER" spacing="40"  maxWidth="380">
+            <Label text="GearBorn Motors" styleClass="label0"/>
+
+            <VBox spacing="20">
+                <VBox spacing="10">
+                    <HBox spacing="5" alignment="CENTER">
+                        <Label text="👤User/Email ➤" styleClass="labelBlanco"/>
+                        <TextField promptText="Usuario o Email"  styleClass="TextField"/>
+                    </HBox>
+
+                    <HBox spacing="5" alignment="CENTER">
+                        <Label text="🔒 Contraseña ➤" styleClass="labelBlanco"/>
+                        <PasswordField promptText="Contraseña" styleClass="PasswordField"/>
+                    </HBox>
+                </VBox>
+
+                <HBox spacing="7" alignment="CENTER">
+                    <Button text="Iniciar Sesión" styleClass="button, button:hover"/>
+                    <Button text="Registrarse" styleClass="button, button:hover"/>
+                </HBox>
+            </VBox>
+        </VBox>
+    </StackPane>
+
+    <Button text="⮜" onAction="#irMenu" styleClass="button, button:hover"/>
+</VBox>

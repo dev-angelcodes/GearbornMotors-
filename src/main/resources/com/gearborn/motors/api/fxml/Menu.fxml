@@ -14,7 +14,6 @@
         <Insets bottom="20.0" left="30.0" right="30.0" top="30"/>
     </padding>
 
-
     <Label text="¡Bienvenido a GearBorn!" alignment="TOP_CENTER" styleClass="label0"/>
 
     <HBox alignment="TOP_RIGHT">
@@ -31,7 +30,7 @@
                 <Label fx:id="presentation" styleClass="label2" wrapText="true"/>
                 <Label text="Porque sabemos que cada motor tiene un propósito, y el tuyo está por arrancar."
                        styleClass="label2" wrapText="true"/>
-                <Button text="Iniciar Sesion" onAction="#login" styleClass="button, button:hover"/>
+                <Button text="Iniciar Sesion" onAction="#irLogin" styleClass="button, button:hover"/>
             </VBox>
         </StackPane>
     </HBox>
