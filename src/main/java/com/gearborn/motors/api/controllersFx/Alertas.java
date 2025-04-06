@@ -11,11 +11,12 @@ public class Alertas {
         a.showAndWait();
     }
 
-    public static void aviso(String titulo, String cabercero, String contenido){
+    public static void info(String titulo, String cabercero, String contenido){
         Alert a = new Alert(Alert.AlertType.INFORMATION);
         a.setTitle(titulo);
         a.setHeaderText(cabercero);
         a.setContentText(contenido);
         a.showAndWait();
     }
+
 }

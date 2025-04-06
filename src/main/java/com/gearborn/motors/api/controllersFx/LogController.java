@@ -4,11 +4,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
-
+@Controller
 public class LogController {
 
     @FXML public ImageView logo;
+
+    @Autowired private Escenas escenas;
 
     public void initialize() {
         Image img = new Image(String.valueOf(getClass().getResource("/com/gearborn/motors/api/imgs/logoAPP.jpg")));
@@ -19,12 +23,10 @@ public class LogController {
     }
 
     public void irMenu(ActionEvent event) {
-        Escenas escena = new Escenas();
-        escena.cargarMenu(event);
+        escenas.cargarMenu(event);
     }
 
     public void irRegistro(ActionEvent event) {
-        Escenas escenas = new Escenas();
         escenas.cargarRegistro(event);
     }
 }

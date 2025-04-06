@@ -1,6 +1,7 @@
 package com.gearborn.motors.api.persistence.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -32,6 +33,7 @@ public class ClienteEntity {
     @Column(length = 50)
     private String direccion;
 
+    @Column(nullable = false)
     private Integer telefono;
 
     @Column(nullable = false, length = 100, unique = true)
@@ -48,4 +50,15 @@ public class ClienteEntity {
     @OneToMany(mappedBy = "cliente")
     private List<MovimientoEntity> movimientos;
 
+
+    /// CONSTRUCTOR
+    public ClienteEntity(String nombre, String contrasena, String dni, String direccion, Integer telefono, String email, String observaciones) {
+        this.nombre = nombre;
+        this.contrasena = contrasena;
+        this.dni = dni;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.email = email;
+        this.observaciones = observaciones;
+    }
 }
