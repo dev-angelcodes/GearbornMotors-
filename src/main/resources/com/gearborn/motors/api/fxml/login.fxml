@@ -32,18 +32,18 @@
             <VBox spacing="20">
                 <VBox spacing="10">
                     <HBox spacing="5" alignment="CENTER">
-                        <Label text="👤User/Email ➤" styleClass="labelBlanco"/>
-                        <TextField promptText="Usuario o Email"  styleClass="TextField"/>
+                        <Label text="👤Email ➤" styleClass="labelBlanco"/>
+                        <TextField fx:id="usuario" promptText="introduzca el email"  styleClass="TextField"/>
                     </HBox>
 
                     <HBox spacing="5" alignment="CENTER">
                         <Label text="🔒 Contraseña ➤" styleClass="labelBlanco"/>
-                        <PasswordField promptText="Contraseña" styleClass="PasswordField"/>
+                        <PasswordField fx:id="contrasena" promptText="Contraseña" styleClass="PasswordField"/>
                     </HBox>
                 </VBox>
 
                 <HBox spacing="7" alignment="CENTER">
-                    <Button text="Iniciar Sesión" styleClass="button, button:hover"/>
+                    <Button text="Iniciar Sesión" onAction="#inicioSesion" styleClass="button, button:hover"/>
                     <Button text="Registrarse" onAction="#irRegistro" styleClass="button, button:hover"/>
                 </HBox>
             </VBox>

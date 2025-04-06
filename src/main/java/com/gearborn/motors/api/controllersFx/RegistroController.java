@@ -30,7 +30,6 @@ public class RegistroController {
         } else {
             if(!email.endsWith("@gmail.com") && !email.endsWith("@hotmail.com")) {
                 Alertas.warning("Warning", "Email inválido", "El email solo soporta @gmail.com o @hotmail.com");
-                return;
             }else{
                 try {
                     Integer telefono = Integer.parseInt(telefonoString);
