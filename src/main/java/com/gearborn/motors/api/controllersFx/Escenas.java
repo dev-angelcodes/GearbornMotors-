@@ -25,8 +25,8 @@ public class Escenas {
 
             // Obtener tamaño de pantalla
             Rectangle2D limitePantalla = Screen.getPrimary().getVisualBounds();
-            double ancho = limitePantalla.getWidth() * 0.25;
-            double alto = limitePantalla.getHeight() * 0.6;
+            double ancho = 450;
+            double alto = 575;
 
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
