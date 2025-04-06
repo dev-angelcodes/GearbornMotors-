@@ -27,11 +27,11 @@
                 <padding>
                     <Insets top="10" right="10" bottom="10" left="10"/>
                 </padding>
-                <Label text="Hijo de los engranajes, nacido para el control!" styleClass="label1" wrapText="true"/>
+                <Label text="🛠 Hijo de los engranajes, nacido para el control ⚙️️" styleClass="label1" wrapText="true"/>
                 <Label fx:id="presentation" styleClass="label2" wrapText="true"/>
                 <Label text="Porque sabemos que cada motor tiene un propósito, y el tuyo está por arrancar."
                        styleClass="label2" wrapText="true"/>
-                <Button text="Entrar al catálogo"/>
+                <Button text="Iniciar Sesion" onAction="#login" styleClass="button, button:hover"/>
             </VBox>
         </StackPane>
     </HBox>
