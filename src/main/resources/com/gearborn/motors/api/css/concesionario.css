@@ -1,0 +1,19 @@
+.VBoxPerfilBorder {
+    -fx-border-color: #CFD8DC;     /* Color del borde */
+    -fx-border-width: 2px;         /* Grosor */
+    -fx-border-insets: 5px;        /* Espacio entre borde y contenido */
+    -fx-background-color: #ECEFF1;
+}
+
+.VBoxPerfilSize {
+    -fx-min-width: 50px;
+    -fx-max-width: 300px;
+}
+
+.VBoxVehiculoSize {
+    -fx-pref-height: 200px;
+}
+
+.MenuItemSize {
+    -fx-min-width: 250px;
+}

@@ -56,6 +56,9 @@ public class VehiculoEntity {
     @Column(columnDefinition = "DATETIME")
     private LocalDateTime fechaVenta;
 
+    @Column(name = "imagen")
+    private String nombreImg;
+
     private String observaciones;
 
 
