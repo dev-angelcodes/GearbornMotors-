@@ -33,7 +33,7 @@
                 <VBox spacing="10">
                     <HBox spacing="5" alignment="CENTER">
                         <Label text="👤Email ➤" styleClass="labelBlanco"/>
-                        <TextField fx:id="usuario" promptText="introduzca el email"  styleClass="TextField"/>
+                        <TextField fx:id="usuario" promptText="Introduzca el email"  styleClass="TextField"/>
                     </HBox>
 
                     <HBox spacing="5" alignment="CENTER">

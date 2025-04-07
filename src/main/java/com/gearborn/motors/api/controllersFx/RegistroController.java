@@ -26,7 +26,7 @@ public class RegistroController {
         String telefonoString = this.telefono.getText().trim();
 
         if (nombre.isEmpty() || contrasena.isEmpty() || email.isEmpty() || dni.isEmpty() || telefonoString.isEmpty()) {
-            Alertas.error("Error", "Campos vacíos", "Por favor, completa todos los campos que tienen 🔸.");
+            Alertas.error("Error", "Campos vacíos", "Por favor, completa todos los campos que tienen \"🔸\".");
         } else {
             if(!email.endsWith("@gmail.com") && !email.endsWith("@hotmail.com")) {
                 Alertas.warning("Warning", "Email inválido", "El email solo soporta @gmail.com o @hotmail.com");

@@ -23,6 +23,28 @@ public class Escenas {
     @Autowired
     private SpringFXMLLoader springFXMLLoader;
 
+
+    public void cargarConcesionario(ActionEvent event) {
+        try {
+            root = (Parent) springFXMLLoader.load("/com/gearborn/motors/api/fxml/concesionario.fxml");
+
+            Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
+            double ancho = screenBounds.getWidth() * 0.8;
+            double alto = screenBounds.getHeight() * 0.8;
+
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root, ancho, alto);
+            stage.setScene(scene);
+
+            stage.setX(screenBounds.getMinX() + (screenBounds.getWidth() - ancho) / 2);
+            stage.setY(screenBounds.getMinY() + (screenBounds.getHeight() - alto) / 2);
+            stage.show();
+        } catch (IOException e) {
+            System.err.println("Error al cargar la escena del concesionario: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
     public void cargarLogin(ActionEvent event) {
         try {
             root = (Parent) springFXMLLoader.load("/com/gearborn/motors/api/fxml/login.fxml");

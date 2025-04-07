@@ -48,10 +48,12 @@ public class LogController {
             String contrasenaEncriptada = LoginService.encriptarMD5(contrasena.getText().trim());
 
             if(contrasenaEncriptada.equals(cliente.getContrasena())){
-                System.out.println("Inicio de sesión exitoso");
+                escenas.cargarConcesionario(event);
             }else{
                 Alertas.error("Error", "Contraseña incorrecta", "");
             }
+        }else{
+            Alertas.warning("Warning", "El email no existe", "Por favor, registrese");
         }
     }
 }
