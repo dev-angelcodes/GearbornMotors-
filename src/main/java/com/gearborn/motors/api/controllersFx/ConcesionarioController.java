@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Controller
@@ -41,6 +42,7 @@ public class ConcesionarioController {
 
         //Evento Foto Perfil User
         eventoPerfil();
+
     }
 
     private void eventoPerfil() {
@@ -51,7 +53,6 @@ public class ConcesionarioController {
         fotoPerf.setFitWidth(50);
         fotoPerf.setFitHeight(50);
         fotoPerf.setImage(img);
-
 
         fotoPerf.setOnMouseClicked(event -> {
             System.out.println("Imagen clickeada");
@@ -98,10 +99,8 @@ public class ConcesionarioController {
         return hbox;
     }
 
-    private void VehiculoSave() {
-        VehiculoEntity coche = new VehiculoEntity();
-
-        vehiculoService.save(coche);
+    private void VehiculoSave(VehiculoEntity vehiculo) {
+        vehiculoService.save(vehiculo);
     }
 
     private void mostrarVehiculo() {

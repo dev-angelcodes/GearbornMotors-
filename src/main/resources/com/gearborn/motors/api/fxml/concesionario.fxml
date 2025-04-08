@@ -45,13 +45,31 @@
             </VBox>
         </HBox>
 
-        <Button text="⮜" onAction="#irLog" styleClass="button, button:hover"/>
+        <Button text="⮜" onAction="#irLog" styleClass="buttonReturn, buttonReturn:hover"/>
     </VBox>
 
     <!-- Panel de perfil a la derecha -->
     <VBox styleClass="VBoxPerfil, Border"
-          alignment="TOP_CENTER"
           spacing="25">
-        <ImageView fx:id="fotoPerf"/>
+        <VBox alignment="TOP_RIGHT">
+            <ImageView fx:id="fotoPerf"/>
+        </VBox>
+        <VBox spacing="20">
+            <Label text="Nombre:"/>
+            <Label text="Direccion:"/>
+            <Label text="Telefono:"/>
+            <Label text="Email:"/>
+            <VBox spacing="10" alignment="CENTER">
+                <Label text="Observaciones ↡ "/>
+                <TextArea promptText="EJ: Interesado en coches de color rojo."
+                          prefWidth="300"
+                          wrapText="true"/>
+                <Button text="Actualizar"/>
+            </VBox>
+            <VBox alignment="BOTTOM_CENTER">
+                <Label text="¿Quieres vender tu coche?"/>
+                <Button text="VENDER"/>
+            </VBox>
+        </VBox>
     </VBox>
 </HBox>

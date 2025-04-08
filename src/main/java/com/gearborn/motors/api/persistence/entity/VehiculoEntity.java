@@ -91,5 +91,4 @@ public class VehiculoEntity {
         this.nombreImg = nombreImg;
         this.observaciones = observaciones;
     }
-
 }

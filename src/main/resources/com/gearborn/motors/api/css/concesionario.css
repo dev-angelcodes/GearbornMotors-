@@ -22,7 +22,7 @@
     -fx-font-weight: bold; /* Negrita */
 }
 
-.button{
+.buttonReturn{
     -fx-background-color: #D2691E;
     -fx-text-fill: white; /* Color del texto en blanco */
     -fx-font-size: 18px; /* Tamaño de la fuente más grande */
@@ -33,7 +33,7 @@
     -fx-border-width: 2px; /* Grosor del borde */
 }
 
-.button:hover {
+.buttonReturn:hover {
     -fx-background-color: #E07B39; /* Color de fondo más claro cuando se pasa el ratón */
 }
 
