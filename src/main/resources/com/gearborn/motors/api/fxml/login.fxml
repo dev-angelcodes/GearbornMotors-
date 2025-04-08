@@ -43,8 +43,8 @@
                 </VBox>
 
                 <HBox spacing="7" alignment="CENTER">
-                    <Button text="Iniciar Sesión" onAction="#inicioSesion" styleClass="button, button:hover"/>
-                    <Button text="Registrarse" onAction="#irRegistro" styleClass="button, button:hover"/>
+                    <Button text="Iniciar Sesión" onAction="#inicioSesion"/>
+                    <Button text="Registrarse" onAction="#irRegistro"/>
                 </HBox>
             </VBox>
         </VBox>

@@ -52,6 +52,6 @@
     <VBox styleClass="VBoxPerfil, Border"
           alignment="TOP_CENTER"
           spacing="25">
-        <Label text="ghhgf" wrapText="true"/>
+        <ImageView fx:id="fotoPerf"/>
     </VBox>
 </HBox>

@@ -1,6 +1,5 @@
 package com.gearborn.motors.api.controllersFx;
 
-import com.gearborn.motors.api.persistence.entity.ClienteEntity;
 import com.gearborn.motors.api.persistence.entity.VehiculoEntity;
 import com.gearborn.motors.api.service.VehiculoService;
 import javafx.event.ActionEvent;
@@ -14,7 +13,7 @@ import javafx.scene.layout.VBox;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import java.time.LocalDateTime;
+
 import java.util.List;
 
 @Controller
@@ -22,6 +21,8 @@ public class ConcesionarioController {
 
     @FXML
     public VBox vehiculosContainer;
+    @FXML
+    public ImageView fotoPerf;
     @Autowired
     private Escenas escenas;
     @Autowired
@@ -38,6 +39,24 @@ public class ConcesionarioController {
             vehiculosContainer.getChildren().add(hBox);
         }
 
+        //Evento Foto Perfil User
+        eventoPerfil();
+    }
+
+    private void eventoPerfil() {
+
+        String ruta = "/com/gearborn/motors/api/imgs/user.png";
+        Image img = new Image(String.valueOf(getClass().getResource(ruta)));
+        fotoPerf.setPreserveRatio(true);
+        fotoPerf.setFitWidth(50);
+        fotoPerf.setFitHeight(50);
+        fotoPerf.setImage(img);
+
+
+        fotoPerf.setOnMouseClicked(event -> {
+            System.out.println("Imagen clickeada");
+        });
+
     }
 
     private HBox crearHBox(VehiculoEntity v) {
@@ -50,6 +69,7 @@ public class ConcesionarioController {
         ImageView imagen = new ImageView();
         imagen.setFitWidth(155);
         imagen.setFitHeight(100);
+        imagen.setPreserveRatio(true);
         try {
             String ruta = "/com/gearborn/motors/api/imgs/" + v.getNombreImg();
             imagen.setImage(new Image(String.valueOf(getClass().getResource(ruta))));
@@ -58,7 +78,6 @@ public class ConcesionarioController {
             //Usar una imagen por defecto
             String ruta = "/com/gearborn/motors/api/imgs/vDefault.png";
             imagen.setImage(new Image(String.valueOf(getClass().getResource(ruta))));
-
         }
 
         VBox vbox = new VBox(15);
