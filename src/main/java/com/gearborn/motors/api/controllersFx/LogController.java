@@ -39,21 +39,18 @@ public class LogController {
     }
 
     public void inicioSesion(ActionEvent event) {
-        /*escenas.cargarLogin(event);*/
+        //Obtenemos el Email y encriptamos la contraseña introducida
         String email = usuario.getText().trim();
+
+        String contrasenaEncriptada = LoginService.encriptarMD5(contrasena.getText().trim());
 
         //Verificamos que el email este en la bd
         ClienteEntity cliente = loginService.findByEmail(email);
-        if(cliente != null){
-            String contrasenaEncriptada = LoginService.encriptarMD5(contrasena.getText().trim());
-
-            if(contrasenaEncriptada.equals(cliente.getContrasena())){
-                escenas.cargarConcesionario(event);
-            }else{
-                Alertas.error("Error", "Contraseña incorrecta", "");
-            }
+        if(cliente != null && contrasenaEncriptada.equals(cliente.getContrasena())){
+            escenas.cargarConcesionario(event);
         }else{
-            Alertas.warning("Warning", "El email no existe", "Por favor, registrese");
+            Alertas.warning("Warning", "Error al iniciar sesión", "Verifica que el " +
+                    "nombre de usuario y la contraseña sean correctos.");
         }
     }
 }

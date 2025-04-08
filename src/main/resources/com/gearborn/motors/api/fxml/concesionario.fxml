@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.*?>
-
-
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
+
 <HBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12"
       stylesheets="/com/gearborn/motors/api/css/concesionario.css"
       spacing="20"
@@ -17,32 +14,44 @@
         <Insets bottom="20.0" left="30.0" top="20"/>
     </padding>
 
-    <VBox alignment="TOP_CENTER" HBox.hgrow="ALWAYS" spacing="50">
+    <!-- Contenedor principal de la parte izquierda -->
+    <VBox alignment="TOP_CENTER" spacing="50" HBox.hgrow="ALWAYS">
         <Label text="GearBorn Motors"/>
 
-        <HBox spacing="15" alignment="TOP_CENTER">
-            <ScrollPane fitToHeight="true" fitToWidth="true">
-                <HBox spacing="10" alignment="CENTER_LEFT">
-                    <ImageView fx:id="imgCoche0"/>
-                    <VBox spacing="15" alignment="TOP_CENTER" styleClass="VBoxVehiculoSize">
-                        <Label text="NombreVehiculo"/>
-                        <Label text="DescripVehiculo"/>
+        <HBox spacing="15" alignment="TOP_CENTER" HBox.hgrow="ALWAYS">
+            <!-- ScrollPane expansible -->
+            <ScrollPane fitToHeight="true" fitToWidth="true" HBox.hgrow="ALWAYS">
+                <content>
+                    <VBox spacing="10">
+                        <HBox spacing="10" alignment="CENTER_LEFT">
+                            <ImageView fx:id="imgCoche0"/>
+                            <VBox spacing="15" alignment="TOP_CENTER" styleClass="VBoxVehiculoSize">
+                                <Label text="NombreVehiculo"/>
+                                <Label text="DescripVehiculo"/>
+                            </VBox>
+                        </HBox>
+                        <HBox spacing="10" alignment="CENTER_LEFT">
+                            <ImageView fx:id="imgCoche1"/>
+                            <VBox spacing="15" alignment="TOP_CENTER" styleClass="VBoxVehiculoSize">
+                                <Label text="NombreVehiculo"/>
+                                <Label text="DescripVehiculo"/>
+                            </VBox>
+                        </HBox>
                     </VBox>
-                </HBox>
-                <HBox spacing="10" alignment="CENTER_LEFT">
-                    <ImageView fx:id="imgCoche1"/>
-                    <VBox spacing="15" alignment="TOP_CENTER" styleClass="VBoxVehiculoSize">
-                        <Label text="NombreVehiculo"/>
-                        <Label text="DescripVehiculo"/>
-                    </VBox>
-                </HBox>
+                </content>
             </ScrollPane>
 
-            <Button text="VOLVER" styleClass="MenuItemSize"/>
+            <!-- Botón al lado del scroll -->
+            <MenuButton text="MenuButton" styleClass="MenuButtonSize"/>
         </HBox>
+
+        <Button text="⮜" onAction="#irLog" styleClass="button, button:hover"/>
     </VBox>
 
-    <VBox styleClass="VBoxPerfilBorder, VBoxPerfilSize" alignment="TOP_CENTER" spacing="25"> <!--VBox para el perfil-->
-        <Label text="saddddddddddddddddddddddddddddddddddddddddddddddd"/>
+    <!-- Panel de perfil a la derecha -->
+    <VBox styleClass="VBoxPerfilBorder"
+          alignment="TOP_CENTER"
+          spacing="25">
+        <Label text="ghhgf" wrapText="true"/>
     </VBox>
 </HBox>

@@ -5,15 +5,21 @@
     -fx-background-color: #ECEFF1;
 }
 
-.VBoxPerfilSize {
-    -fx-min-width: 50px;
-    -fx-max-width: 300px;
+.MenuButtonSize {
+    -fx-min-width: 175px;
 }
 
-.VBoxVehiculoSize {
-    -fx-pref-height: 200px;
+.button{
+    -fx-background-color: #D2691E;
+    -fx-text-fill: white; /* Color del texto en blanco */
+    -fx-font-size: 18px; /* Tamaño de la fuente más grande */
+    -fx-padding: 10px 20px; /* Espaciado alrededor del texto */
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px; /* Bordes redondeados */
+    -fx-border-color: #A0522D; /* Color del borde en un tono más oscuro */
+    -fx-border-width: 2px; /* Grosor del borde */
 }
 
-.MenuItemSize {
-    -fx-min-width: 250px;
+.button:hover {
+    -fx-background-color: #E07B39; /* Color de fondo más claro cuando se pasa el ratón */
 }
