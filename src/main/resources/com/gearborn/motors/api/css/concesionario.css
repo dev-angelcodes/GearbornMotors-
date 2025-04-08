@@ -1,12 +1,25 @@
-.VBoxPerfilBorder {
+.Border {
     -fx-border-color: #CFD8DC;     /* Color del borde */
     -fx-border-width: 2px;         /* Grosor */
     -fx-border-insets: 5px;        /* Espacio entre borde y contenido */
+}
+
+.ScrollPane{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.VBoxPerfil{
     -fx-background-color: #ECEFF1;
 }
 
 .MenuButtonSize {
     -fx-min-width: 175px;
+}
+
+.nombreVehiculo {
+    -fx-font-size: 20px; /* Tamaño de la fuente */
+    -fx-text-fill: #37474F; /* Color del texto */
+    -fx-font-weight: bold; /* Negrita */
 }
 
 .button{

@@ -51,6 +51,9 @@ public class LogController {
         }else{
             Alertas.warning("Warning", "Error al iniciar sesión", "Verifica que el " +
                     "nombre de usuario y la contraseña sean correctos.");
+
+            //SOLO LA CARGO PARA TESTEAR(ACORDARSE DE BORRAR)
+            escenas.cargarConcesionario(event);
         }
     }
 }

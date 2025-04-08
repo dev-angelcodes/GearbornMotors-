@@ -20,36 +20,36 @@
 
         <HBox spacing="15" alignment="TOP_CENTER" HBox.hgrow="ALWAYS">
             <!-- ScrollPane expansible -->
-            <ScrollPane fitToHeight="true" fitToWidth="true" HBox.hgrow="ALWAYS">
-                <content>
-                    <VBox spacing="10">
-                        <HBox spacing="10" alignment="CENTER_LEFT">
-                            <ImageView fx:id="imgCoche0"/>
-                            <VBox spacing="15" alignment="TOP_CENTER" styleClass="VBoxVehiculoSize">
-                                <Label text="NombreVehiculo"/>
-                                <Label text="DescripVehiculo"/>
-                            </VBox>
-                        </HBox>
-                        <HBox spacing="10" alignment="CENTER_LEFT">
-                            <ImageView fx:id="imgCoche1"/>
-                            <VBox spacing="15" alignment="TOP_CENTER" styleClass="VBoxVehiculoSize">
-                                <Label text="NombreVehiculo"/>
-                                <Label text="DescripVehiculo"/>
-                            </VBox>
-                        </HBox>
-                    </VBox>
-                </content>
+            <ScrollPane fitToHeight="true" fitToWidth="true" HBox.hgrow="ALWAYS" styleClass="ScrollPane">
+                <VBox fx:id="vehiculosContainer" spacing="10">
+
+                </VBox>
             </ScrollPane>
 
-            <!-- Botón al lado del scroll -->
-            <MenuButton text="MenuButton" styleClass="MenuButtonSize"/>
+            <VBox spacing="5">
+                <MenuButton text="MenuButton" styleClass="MenuButtonSize">
+                    <items>
+                        <MenuItem text="MenuItem1"/>
+                        <MenuItem text="MenuItem2"/>
+                        <MenuItem text="MenuItem3"/>
+                    </items>
+
+                </MenuButton>
+                <MenuButton text="MenuButton" styleClass="MenuButtonSize">
+                    <items>
+                        <MenuItem text="MenuItem1"/>
+                        <MenuItem text="MenuItem2"/>
+                        <MenuItem text="MenuItem3"/>
+                    </items>
+                </MenuButton>
+            </VBox>
         </HBox>
 
         <Button text="⮜" onAction="#irLog" styleClass="button, button:hover"/>
     </VBox>
 
     <!-- Panel de perfil a la derecha -->
-    <VBox styleClass="VBoxPerfilBorder"
+    <VBox styleClass="VBoxPerfil, Border"
           alignment="TOP_CENTER"
           spacing="25">
         <Label text="ghhgf" wrapText="true"/>

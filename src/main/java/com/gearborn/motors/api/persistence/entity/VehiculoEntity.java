@@ -43,17 +43,15 @@ public class VehiculoEntity {
     private String tipoCombustible;
 
     @Column(nullable = false)
-    @Enumerated(EnumType.STRING)
-    private TipoCambio tipoCambio;
+    private String tipoCambio;
 
     @Column(nullable = false)
-    @Enumerated(EnumType.STRING)
-    private EstadoVehiculo estado;
+    private String estado;
 
-    @Column(nullable = false, columnDefinition = "DATETIME")
-    private LocalDateTime fechaCompra;
+    @Column(name = "fecha_compra", nullable = false, columnDefinition = "DATETIME")
+    private LocalDateTime fechaCompra = LocalDateTime.now();
 
-    @Column(columnDefinition = "DATETIME")
+    @Column(name = "fecha_venta", columnDefinition = "DATETIME")
     private LocalDateTime fechaVenta;
 
     @Column(name = "imagen")
@@ -72,19 +70,26 @@ public class VehiculoEntity {
     private List<GastoEntity> gastos;
 
 
-
-    //-------------Metodos para los enumerados---------------
-    enum TipoCambio {
-        MANUAL,
-        AUTOMATICO,
-        ELECTRICO,
-        SECUENCIAL,
-        DOBLE_EMBRAGUE
+    //CONSTRUCTOR
+    public VehiculoEntity(String marca, String modelo, String matricula, Integer anio, Integer km,
+                          boolean coche, String color, String tipoCombustible,
+                          String tipoCambio, String estado,
+                          LocalDateTime fechaCompra, LocalDateTime fechaVenta,
+                          String nombreImg, String observaciones) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.matricula = matricula;
+        this.anio = anio;
+        this.km = km;
+        this.coche = coche;
+        this.color = color;
+        this.tipoCombustible = tipoCombustible;
+        this.tipoCambio = tipoCambio;
+        this.estado = estado;
+        this.fechaCompra = fechaCompra;
+        this.fechaVenta = fechaVenta;
+        this.nombreImg = nombreImg;
+        this.observaciones = observaciones;
     }
 
-    enum EstadoVehiculo {
-        DISPONIBLE,
-        VENDIDO,
-        RESERVADO
-    }
 }
